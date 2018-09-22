@@ -1,7 +1,5 @@
 package com.fallen.parrot.mybatis.entity;
 
-import com.fallen.parrot.mybatis.enums.UserSexEnum;
-
 import java.io.Serializable;
 
 public class UserEntity implements Serializable {
@@ -10,9 +8,14 @@ public class UserEntity implements Serializable {
     private Long id;
     private String name;
     private Integer type;
-    private UserSexEnum userSex;
+    private Integer userSex;
 
-    public UserEntity(String name, Integer type, UserSexEnum userSex)
+    public UserEntity()
+    {
+        super();
+    }
+
+    public UserEntity(String name, Integer type, Integer userSex)
     {
         super();
         this.name = name;
@@ -44,16 +47,16 @@ public class UserEntity implements Serializable {
         this.type = type;
     }
 
-    public UserSexEnum getUserSex() {
+    public Integer getUserSex() {
         return userSex;
     }
 
-    public void setUserSex(UserSexEnum userSex) {
+    public void setUserSex(Integer userSex) {
         this.userSex = userSex;
     }
 
     @Override
     public String toString() {
-        return "name " + name + ",type " + type + ",user_sex, " + userSex;
+        return "name: " + name + ",type: " + type + ",user_sex: " + userSex;
     }
 }
