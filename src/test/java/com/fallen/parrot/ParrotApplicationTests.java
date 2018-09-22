@@ -1,7 +1,10 @@
 package com.fallen.parrot;
 
 import com.fallen.parrot.mybatis.entity.UserEntity;
+import com.fallen.parrot.mybatis.entity.UserThirdAccessEntity;
+import com.fallen.parrot.mybatis.enums.UserSexEnum;
 import com.fallen.parrot.mybatis.mapper.UserMapper;
+import com.fallen.parrot.mybatis.mapper.UserThirdAccessMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +19,22 @@ import java.util.List;
 public class ParrotApplicationTests {
 
     private UserMapper userMapper;
+    private UserThirdAccessMapper userThirdAccessMapper;
 
     @Resource
     public void setUserMapper(UserMapper userMapper) {
         this.userMapper = userMapper;
     }
 
+    @Resource
+    public void setUserThirdAccessMapper(UserThirdAccessMapper userThirdAccessMapper) {
+        this.userThirdAccessMapper = userThirdAccessMapper;
+    }
+
     @Test
     public void contextLoads() {
-        List<UserEntity> users = userMapper.getAll();
-        System.out.println(users.toString());
+        List<UserThirdAccessEntity> access = userThirdAccessMapper.getListByUserId(Long.valueOf(1));
+        System.out.println(access.get(0).getUser().getSex().getString());
     }
 
 }
