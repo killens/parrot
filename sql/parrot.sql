@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-09-22 22:52:30
+Date: 2018-09-23 00:34:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `users` (
   `name` varchar(50) NOT NULL DEFAULT '' COMMENT '用户名',
   `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '注册类型 1-手机 2-微信 3-qq',
   `nick_name` varchar(50) NOT NULL DEFAULT '' COMMENT '昵称',
-  `sex` enum('0','1','2') DEFAULT '0' COMMENT '性别 0-未知 1-男 2-女',
+  `sex` enum('0','1','2') NOT NULL DEFAULT '0' COMMENT '性别 0-未知 1-男 2-女',
   `birthday` date DEFAULT NULL COMMENT '出生日期',
   `phone` varchar(30) NOT NULL DEFAULT '' COMMENT '绑定手机号',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '状态 0-正常 2-禁用',
