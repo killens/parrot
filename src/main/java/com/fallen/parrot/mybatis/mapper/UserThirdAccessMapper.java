@@ -10,5 +10,5 @@ public interface UserThirdAccessMapper {
 //    @Results({
 //            @Result(property="user",column="user_id",one=@One(select="com.fallen.parrot.mybatis.mapper.UserMapper.findById"))
 //    })
-    UserThirdAccessEntity findByUserId(@Param("userId")Long userId, @Param("type")int type);
+    UserThirdAccessEntity findByUserId(@Param("userId") Long userId, @Param("type") int type);
 }
