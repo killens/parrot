@@ -40,7 +40,7 @@ CREATE TABLE `users` (
 DROP TABLE IF EXISTS `user_third_accesses`;
 CREATE TABLE `user_third_accesses` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户ID',
   `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '类型 1-微信 2-qq',
   `openid` varchar(100) NOT NULL DEFAULT '',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '状态 0-正常 2-禁用',
