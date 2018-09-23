@@ -30,8 +30,9 @@ public class ParrotApplicationTests {
 
     @Test
     public void contextLoads() {
-        List<UserThirdAccessEntity> access = userThirdAccessMapper.getListByUserId(Long.valueOf(1));
-        System.out.println(access.get(0).getUser().getSex().getString());
+        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(1), 1);
+        System.out.println(access.getUser().getId());
+        System.out.println(access.getUserId());
     }
 
 }
