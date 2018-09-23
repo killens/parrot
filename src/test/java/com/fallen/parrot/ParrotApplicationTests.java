@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -30,7 +29,7 @@ public class ParrotApplicationTests {
 
     @Test
     public void contextLoads() {
-        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(1), 2);
+        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(1), 1);
         if (access != null) {
             System.out.println(access.getUser().getId());
             System.out.println(access.getUserId());
