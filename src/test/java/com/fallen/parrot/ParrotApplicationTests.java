@@ -1,13 +1,10 @@
 package com.fallen.parrot;
 
-import com.fallen.parrot.mybatis.entity.UserEntity;
 import com.fallen.parrot.mybatis.entity.UserThirdAccessEntity;
-import com.fallen.parrot.mybatis.enums.UserSexEnum;
 import com.fallen.parrot.mybatis.mapper.UserMapper;
 import com.fallen.parrot.mybatis.mapper.UserThirdAccessMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
