@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-09-23 00:34:31
+Date: 2018-09-23 11:25:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,9 +28,9 @@ CREATE TABLE `users` (
   `birthday` date DEFAULT NULL COMMENT '出生日期',
   `phone` varchar(30) NOT NULL DEFAULT '' COMMENT '绑定手机号',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '状态 0-正常 2-禁用',
-  `create_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `delete_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `create_at` datetime NOT NULL,
+  `update_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `delete_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
 
