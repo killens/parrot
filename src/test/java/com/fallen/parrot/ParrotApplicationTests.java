@@ -30,7 +30,7 @@ public class ParrotApplicationTests {
 
     @Test
     public void contextLoads() {
-        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(1), 1);
+        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(1), 2);
         if (access != null) {
             System.out.println(access.getUser().getId());
             System.out.println(access.getUserId());
