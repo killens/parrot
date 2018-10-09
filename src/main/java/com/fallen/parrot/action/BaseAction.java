@@ -5,6 +5,9 @@ import com.fallen.parrot.tool.http.SessionTool;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 基础处理Action
+ */
 public class BaseAction {
 
     protected HttpServletRequest request;

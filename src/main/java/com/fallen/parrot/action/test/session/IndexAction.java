@@ -7,6 +7,9 @@ import com.fallen.parrot.tool.http.SessionTool;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
+/**
+ * 测试session action
+ */
 public class IndexAction extends BaseAction implements BaseActionServiceI {
 
     public IndexAction(HttpServletRequest request) {
