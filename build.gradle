@@ -33,6 +33,7 @@ dependencies {
     compile('org.springframework.session:spring-session-data-redis')
     compile('org.springframework.session:spring-session-jdbc')
     compile('com.alibaba:druid-spring-boot-starter:1.1.10')
+    compile('org.hashids:hashids:1.0.1')
     runtime('mysql:mysql-connector-java')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
