@@ -3,6 +3,7 @@ package com.fallen.parrot;
 import com.fallen.parrot.mybatis.entity.UserThirdAccessEntity;
 import com.fallen.parrot.mybatis.mapper.UserMapper;
 import com.fallen.parrot.mybatis.mapper.UserThirdAccessMapper;
+import com.fallen.parrot.tool.random.hashid.HashidTool;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,6 +37,8 @@ public class ParrotApplicationTests {
         } else {
             System.out.println("无记录");
         }
+        HashidTool tool = new HashidTool();
+        System.out.println(tool.getHashids().encode(1,2,3));
     }
 
 }
