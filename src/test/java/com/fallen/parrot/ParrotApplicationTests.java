@@ -30,10 +30,14 @@ public class ParrotApplicationTests {
 
     @Test
     public void contextLoads() {
-        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(1), 1);
+        UserThirdAccessEntity access = userThirdAccessMapper.findByUserId(Long.valueOf(2), 1);
         if (access != null) {
             System.out.println(access.getUser().getId());
             System.out.println(access.getUserId());
+            System.out.println(access.getId());
+            System.out.println(access.getType());
+            System.out.println(access.getUser().getType());
+            System.out.println(access.getUser().getCreateAt());
         } else {
             System.out.println("无记录");
         }

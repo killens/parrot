@@ -5,6 +5,7 @@
     <resultMap id="accessWithUserResult" type="com.fallen.parrot.mybatis.entity.UserThirdAccessEntity">
         <id column="id" property="id" />
         <result column="user_id" property="userId" />
+        <result column="access_type" property="type" />
         <association property="user" javaType="com.fallen.parrot.mybatis.entity.UserEntity">
             <id column="user_id" property="id" />
             <result property="sex" column="sex" typeHandler="com.fallen.parrot.mybatis.enums.handle.UserSexHandle" />
@@ -12,7 +13,7 @@
         </association>
     </resultMap>
     <select id="findByUserId" resultMap="accessWithUserResult">
-        SELECT a.id,a.user_id,a.type,a.openid,b.`name`,b.nick_name as nickName,b.sex,b.phone,b.create_at
+        SELECT a.id,a.user_id,a.type AS access_type,a.openid,b.`name`,b.nick_name AS nickName,b.sex,b.phone,b.create_at
             FROM user_third_accesses a
             LEFT JOIN users b ON a.user_id=b.id
             WHERE a.user_id=#{userId} AND a.type=#{type} AND a.`status`=0 AND ISNULL(b.delete_at)
