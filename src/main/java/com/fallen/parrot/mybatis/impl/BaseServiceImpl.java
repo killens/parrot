@@ -4,6 +4,11 @@ import com.fallen.parrot.mybatis.mapper.BaseMapper;
 
 import javax.annotation.Resource;
 
+/**
+ * 基础服务处理类
+ * @param <T> entity
+ * @param <M> mapper
+ */
 public abstract class BaseServiceImpl<T, M extends BaseMapper> implements BaseServiceI<T> {
 
     private M mapper;
