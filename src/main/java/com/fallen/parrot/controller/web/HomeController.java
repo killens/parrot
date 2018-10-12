@@ -3,6 +3,7 @@ package com.fallen.parrot.controller.web;
 import com.fallen.parrot.action.web.home.IndexAction;
 import com.fallen.parrot.action.web.home.TestAction;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,9 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 public class HomeController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    @ResponseBody
-    public String index(HttpServletRequest request) {
-        IndexAction action = new IndexAction(request);
+    public String index(HttpServletRequest request, Model model) {
+        IndexAction action = new IndexAction(request, model);
         return action.run();
     }
 
