@@ -1,22 +1,22 @@
 package com.fallen.parrot.mybatis.enums;
 
 public enum UserSexEnum {
-    UNKOWN(0), MAN(1), WOMAN(2);
+    UNKOWN("0"), MAN("1"), WOMAN("2");
 
-    private int value;
+    private String value;
 
-    private UserSexEnum(int value) {
+    private UserSexEnum(String value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public String getValue() {
         return value;
     }
 
-    public static UserSexEnum int2Enum(int sexType) {
+    public static UserSexEnum string2Enum(String sexType) {
         UserSexEnum[] sexes = UserSexEnum.values();
         for (UserSexEnum type : sexes) {
-            if (type.getValue() == sexType) {
+            if (type.getValue().equals(sexType)) {
                 return type;
             }
         }
@@ -25,11 +25,11 @@ public enum UserSexEnum {
 
     public String getString() {
         switch (value) {
-            case 0:
+            case "0":
                 return "未知";
-            case 1:
+            case "1":
                 return "男";
-            case 2:
+            case "2":
                 return "女";
         }
         return "未知";

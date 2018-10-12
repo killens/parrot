@@ -13,21 +13,21 @@ public class UserSexHandle implements TypeHandler<UserSexEnum> {
 
     @Override
     public void setParameter(PreparedStatement ps, int i, UserSexEnum parameter, JdbcType jdbcType) throws SQLException {
-        ps.setInt(i, parameter.getValue());
+        ps.setString(i, parameter.getValue());
     }
 
     @Override
     public UserSexEnum getResult(ResultSet rs, String columnName) throws SQLException {
-        return UserSexEnum.int2Enum(rs.getInt(columnName));
+        return UserSexEnum.string2Enum(rs.getString(columnName));
     }
 
     @Override
     public UserSexEnum getResult(ResultSet rs, int columnIndex) throws SQLException {
-        return UserSexEnum.int2Enum(rs.getInt(columnIndex));
+        return UserSexEnum.string2Enum(rs.getString(columnIndex));
     }
 
     @Override
     public UserSexEnum getResult(CallableStatement cs, int columnIndex) throws SQLException {
-        return UserSexEnum.int2Enum(cs.getInt(columnIndex));
+        return UserSexEnum.string2Enum(cs.getString(columnIndex));
     }
 }

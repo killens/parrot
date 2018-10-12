@@ -11,21 +11,28 @@ public class UserEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private Long id;
-    private String name;
-    private Integer type;
-    private String nickName;
-    private UserSexEnum sex;
+    private String name = "";
+    private Integer type = 0;
+    private String nickName = "";
+    private UserSexEnum sex = UserSexEnum.UNKOWN;
     private Date birthday;
-    private String phone;
-    private Integer status;
+    private String phone = "";
+    private Integer status = 0;
     private Timestamp createAt;
     private Timestamp updatedAt;
     private Timestamp deleteAt;
     private List<UserThirdAccessEntity> thirdAccess;
 
-    public UserEntity()
-    {
+    public UserEntity() {
         super();
+    }
+
+    public UserEntity(String name, String nickName, Integer type, String phone) {
+        this.name = name;
+        this.nickName = nickName;
+        this.type = type;
+        this.phone = phone;
+        createAt = new Timestamp(new Date().getTime());
     }
 
     public Long getId() {
