@@ -27,8 +27,8 @@ public class HashidTool {
         initConfig(inputConfig);
     }
 
-    public HashidTool(int length, String alphabet, String salt) {
-        initConfig(length, alphabet, salt);
+    public HashidTool(int length, String salt, String alphabet) {
+        initConfig(length, salt, alphabet);
     }
 
     public void initConfig(BaseConfig inputConfig) {
@@ -38,7 +38,7 @@ public class HashidTool {
         config.salt = inputConfig.getSalt();
     }
 
-    public void initConfig(int length, String alphabet, String salt) {
+    public void initConfig(int length, String salt, String alphabet) {
         clearConfig();
         config.length = length;
         config.alphabet = alphabet;
