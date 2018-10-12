@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<UserEntity> {
 
     @Insert("INSERT INTO users(`name`, `type`, `nick_name`, `sex`, `birthday`, `phone`, `status`, `create_at`) " +
             "VALUES(#{name}, #{type}, #{nickName}, #{sex, typeHandler=com.fallen.parrot.mybatis.enums.handle.UserSexHandle}, #{birthday}, #{phone}, #{status}, #{createAt})")

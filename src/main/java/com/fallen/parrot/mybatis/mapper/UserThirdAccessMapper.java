@@ -4,7 +4,7 @@ import com.fallen.parrot.mybatis.entity.UserThirdAccessEntity;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
-public interface UserThirdAccessMapper {
+public interface UserThirdAccessMapper extends BaseMapper<UserThirdAccessEntity> {
 
     @Select("SELECT id,user_id,type,openid,status FROM user_third_accesses WHERE id=#{id}")
     @Results({
