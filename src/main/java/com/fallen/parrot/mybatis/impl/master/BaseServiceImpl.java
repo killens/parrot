@@ -1,5 +1,6 @@
-package com.fallen.parrot.mybatis.impl;
+package com.fallen.parrot.mybatis.impl.master;
 
+import com.fallen.parrot.mybatis.impl.BaseServiceI;
 import com.fallen.parrot.mybatis.mapper.BaseMapper;
 
 import javax.annotation.Resource;
@@ -18,6 +19,10 @@ public abstract class BaseServiceImpl<T, M extends BaseMapper> implements BaseSe
         this.mapper = mapper;
     }
 
+    public M getMapper() {
+        return mapper;
+    }
+
     @Override
     public T insert(T entity) {
         mapper.insert(entity);
@@ -26,6 +31,10 @@ public abstract class BaseServiceImpl<T, M extends BaseMapper> implements BaseSe
 
     @Override
     public T findById(Long id) {
-        return (T) mapper.findById(id);
+        T object = (T) mapper.findById(id);
+        if (object != null) {
+            return object;
+        }
+        return null;
     }
 }
