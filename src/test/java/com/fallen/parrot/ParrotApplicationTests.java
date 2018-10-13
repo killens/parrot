@@ -1,10 +1,13 @@
 package com.fallen.parrot;
 
+import com.alibaba.fastjson.JSONObject;
 import com.fallen.parrot.mybatis.entity.UserEntity;
 import com.fallen.parrot.mybatis.entity.UserThirdAccessEntity;
 import com.fallen.parrot.mybatis.impl.user.UserImpl;
 import com.fallen.parrot.mybatis.mapper.UserMapper;
 import com.fallen.parrot.mybatis.mapper.UserThirdAccessMapper;
+import com.fallen.parrot.tool.convertor.JsonTool;
+import com.fallen.parrot.tool.convertor.response.ResponseModel;
 import com.fallen.parrot.tool.random.hashid.HashidTool;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -60,9 +63,15 @@ public class ParrotApplicationTests {
         HashidTool tool = new HashidTool();
         System.out.println(tool.getHashids().encode(1,2,3));
 //        SqlSession session = sqlSessionFactory.openSession();
-        UserEntity user = new UserEntity("132****5678", "132****5678", 1, "13212345678");
-        userImpl.insert(user);
-        System.out.println(user.getId());
+
+//        UserEntity user = new UserEntity("132****5678", "132****5678", 1, "13212345678");
+//        userImpl.insert(user);
+//        System.out.println(user.getId());
+
+        String jsonString = JsonTool.toJson(new ResponseModel());
+        ResponseModel responseObject = JsonTool.parse(jsonString);
+        System.out.println(responseObject);
+        System.out.println(responseObject.getCode());
     }
 
 }

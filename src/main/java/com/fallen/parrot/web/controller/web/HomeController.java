@@ -1,7 +1,7 @@
-package com.fallen.parrot.controller.web;
+package com.fallen.parrot.web.controller.web;
 
-import com.fallen.parrot.action.web.home.IndexAction;
-import com.fallen.parrot.action.web.home.TestAction;
+import com.fallen.parrot.web.action.web.home.IndexAction;
+import com.fallen.parrot.web.action.web.home.TestAction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
-package com.fallen.parrot.controller.test;
+package com.fallen.parrot.web.controller.test;
 
-import com.fallen.parrot.action.test.session.IndexAction;
+import com.fallen.parrot.web.action.test.session.IndexAction;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

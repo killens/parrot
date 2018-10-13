@@ -1,7 +1,7 @@
-package com.fallen.parrot.action.web.home;
+package com.fallen.parrot.web.action.web.home;
 
-import com.fallen.parrot.action.BaseAction;
-import com.fallen.parrot.action.BaseActionServiceI;
+import com.fallen.parrot.web.action.BaseAction;
+import com.fallen.parrot.web.action.BaseActionServiceI;
 import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;

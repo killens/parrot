@@ -1,7 +1,7 @@
-package com.fallen.parrot.action.api.user;
+package com.fallen.parrot.web.action.api.user;
 
-import com.fallen.parrot.action.BaseAction;
-import com.fallen.parrot.action.BaseActionServiceI;
+import com.fallen.parrot.web.action.BaseAction;
+import com.fallen.parrot.web.action.BaseActionServiceI;
 
 import javax.servlet.http.HttpServletRequest;
 

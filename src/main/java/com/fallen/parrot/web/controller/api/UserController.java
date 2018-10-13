@@ -1,7 +1,7 @@
-package com.fallen.parrot.controller.api;
+package com.fallen.parrot.web.controller.api;
 
-import com.fallen.parrot.action.api.user.IndexAction;
-import com.fallen.parrot.action.api.user.TestAction;
+import com.fallen.parrot.web.action.api.user.IndexAction;
+import com.fallen.parrot.web.action.api.user.TestAction;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

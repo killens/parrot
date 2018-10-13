@@ -1,4 +1,4 @@
-package com.fallen.parrot.action;
+package com.fallen.parrot.web.action;
 
 import com.fallen.parrot.tool.http.SessionTool;
 import org.springframework.ui.Model;

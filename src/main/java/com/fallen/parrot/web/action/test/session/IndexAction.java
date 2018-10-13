@@ -1,7 +1,7 @@
-package com.fallen.parrot.action.test.session;
+package com.fallen.parrot.web.action.test.session;
 
-import com.fallen.parrot.action.BaseAction;
-import com.fallen.parrot.action.BaseActionServiceI;
+import com.fallen.parrot.web.action.BaseAction;
+import com.fallen.parrot.web.action.BaseActionServiceI;
 import com.fallen.parrot.tool.http.SessionTool;
 
 import javax.servlet.http.HttpServletRequest;
