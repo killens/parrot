@@ -73,6 +73,7 @@ public class ParrotApplicationTests {
 //        UserEntity user = new UserEntity("132****5678", "132****5678", 1, "13212345678");
 //        userImpl.insert(user);
 //        System.out.println(user.getId());
+        // 多数据源
         UserEntity masterUser = userImpl.findById((long) 2);
         System.out.println("master:"+ masterUser);
         UserEntity slaveUser = slaveUserImpl.findById((long) 2);

@@ -10,6 +10,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class SlaveUserThirdAccessImpl extends BaseServiceImpl<UserThirdAccessEntity, UserThirdAccessMapper> {
 
+    /**
+     * 指定数据源
+     * @param userId
+     * @param type
+     * @return
+     */
     @DataSource(DataSourceContextHolder.Slaver1)
     public UserThirdAccessEntity findByUserId(Long userId, int type) {
         return getMapper().findByUserId(userId, type);

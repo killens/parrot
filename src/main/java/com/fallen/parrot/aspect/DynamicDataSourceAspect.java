@@ -18,7 +18,7 @@ public class DynamicDataSourceAspect {
 //    @Pointcut(value="@within(org.springframework.stereotype.Component) && @annotation(DataSource)")
     @Pointcut(value="@annotation(dataSource)")
     public void dynamicDataSourcePointCut(DataSource dataSource){
-        System.out.println(dataSource.value());
+//        System.out.println(dataSource.value());
     }
 
     @Before(value = "dynamicDataSourcePointCut(dataSource)")
